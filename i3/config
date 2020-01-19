@@ -34,9 +34,9 @@ bindsym $mod+Return exec kitty
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# start dmenu (a program launcher)
-#bindsym $mod+d exec dmenu_run
+# start rofi 
 bindsym $mod+d exec rofi -show run 
+
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -183,4 +183,8 @@ exec_always --no-startup-id wal -R
 #polybar
 exec_always --no-startup-id ~/.config/polybar/polybar.sh &
 
+#betterlockscreen
+exec --no-startup-id betterlockscreen -w dim
+exec --no-startup-id source ~/.fehbg
+bindsym $mod+shift+x exec betterlockscreen -l dim
 
