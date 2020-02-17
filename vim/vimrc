@@ -21,6 +21,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'ericbn/vim-relativize'
 
 "Coc extensions
 let g:coc_global_extensions = [
@@ -45,7 +46,8 @@ call plug#end()
 filetype plugin indent on
 
 "---------------Visuals-------------
-set number					"Line numbers
+set number relativenumber "Line numbers
+
 syntax enable					"Syntax Highlighting
 set background=dark
 set laststatus=2				"Show lightline statusbar
