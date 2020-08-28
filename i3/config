@@ -30,7 +30,7 @@ font pango:monospace 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec kitty 
+bindsym $mod+Return exec gnome-terminal 
 # kill focused window
 bindsym $mod+Shift+q kill
 
@@ -164,7 +164,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 #Remove window Border/Bars
-for_window [class="^.*"] border pixel 0
+for_window [class=".*"] border pixel 0
 #Compton Compositor
 exec --no-startup-id "compton -b"
 #Nitrogen Wallpaper
@@ -188,3 +188,6 @@ exec --no-startup-id betterlockscreen -w dim
 exec --no-startup-id source ~/.fehbg
 bindsym $mod+shift+x exec betterlockscreen -l dim
 
+gaps inner 10
+gaps outer 0
+smart_gaps on
